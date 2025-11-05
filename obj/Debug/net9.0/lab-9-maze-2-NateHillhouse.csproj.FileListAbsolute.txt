@@ -1,0 +1,15 @@
+C:\Users\nhill_mliw72r\Documents\Code_Projects\my-code-dir\lab-9-maze-2-NateHillhouse\bin\Debug\net9.0\lab-9-maze-2-NateHillhouse.exe
+C:\Users\nhill_mliw72r\Documents\Code_Projects\my-code-dir\lab-9-maze-2-NateHillhouse\bin\Debug\net9.0\lab-9-maze-2-NateHillhouse.deps.json
+C:\Users\nhill_mliw72r\Documents\Code_Projects\my-code-dir\lab-9-maze-2-NateHillhouse\bin\Debug\net9.0\lab-9-maze-2-NateHillhouse.runtimeconfig.json
+C:\Users\nhill_mliw72r\Documents\Code_Projects\my-code-dir\lab-9-maze-2-NateHillhouse\bin\Debug\net9.0\lab-9-maze-2-NateHillhouse.dll
+C:\Users\nhill_mliw72r\Documents\Code_Projects\my-code-dir\lab-9-maze-2-NateHillhouse\bin\Debug\net9.0\lab-9-maze-2-NateHillhouse.pdb
+C:\Users\nhill_mliw72r\Documents\Code_Projects\my-code-dir\lab-9-maze-2-NateHillhouse\obj\Debug\net9.0\lab-9-maze-2-NateHillhouse.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nhill_mliw72r\Documents\Code_Projects\my-code-dir\lab-9-maze-2-NateHillhouse\obj\Debug\net9.0\lab-9-maze-2-NateHillhouse.AssemblyInfoInputs.cache
+C:\Users\nhill_mliw72r\Documents\Code_Projects\my-code-dir\lab-9-maze-2-NateHillhouse\obj\Debug\net9.0\lab-9-maze-2-NateHillhouse.AssemblyInfo.cs
+C:\Users\nhill_mliw72r\Documents\Code_Projects\my-code-dir\lab-9-maze-2-NateHillhouse\obj\Debug\net9.0\lab-9-maze-2-NateHillhouse.csproj.CoreCompileInputs.cache
+C:\Users\nhill_mliw72r\Documents\Code_Projects\my-code-dir\lab-9-maze-2-NateHillhouse\obj\Debug\net9.0\lab-9-maze-2-NateHillhouse.sourcelink.json
+C:\Users\nhill_mliw72r\Documents\Code_Projects\my-code-dir\lab-9-maze-2-NateHillhouse\obj\Debug\net9.0\lab-9-maze-2-NateHillhouse.dll
+C:\Users\nhill_mliw72r\Documents\Code_Projects\my-code-dir\lab-9-maze-2-NateHillhouse\obj\Debug\net9.0\refint\lab-9-maze-2-NateHillhouse.dll
+C:\Users\nhill_mliw72r\Documents\Code_Projects\my-code-dir\lab-9-maze-2-NateHillhouse\obj\Debug\net9.0\lab-9-maze-2-NateHillhouse.pdb
+C:\Users\nhill_mliw72r\Documents\Code_Projects\my-code-dir\lab-9-maze-2-NateHillhouse\obj\Debug\net9.0\lab-9-maze-2-NateHillhouse.genruntimeconfig.cache
+C:\Users\nhill_mliw72r\Documents\Code_Projects\my-code-dir\lab-9-maze-2-NateHillhouse\obj\Debug\net9.0\ref\lab-9-maze-2-NateHillhouse.dll
