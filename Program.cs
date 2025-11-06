@@ -17,29 +17,63 @@ foreach (string item in maprows) Console.WriteLine(item);
 int rows = maprows.Length;
 int columns = maprows[0].Length;
 Console.SetCursorPosition(cursorPosition.x, cursorPosition.y);
-
+int collected = 0;
 do
 {
     System.ConsoleKey key = Console.ReadKey(true).Key;
 
-    if (key == ConsoleKey.Escape) break;
+    if (key == ConsoleKey.Escape)
+    {
+        EndCondition("You exited the game.");
+        break;
+    }
     else cursorPosition = CheckKeys(cursorPosition, key, buffer, maprows);
     //else continue;
-    if (maprows[cursorPosition.y - buffer.y][cursorPosition.x] == '$') break;
+    if (maprows[cursorPosition.y - buffer.y][cursorPosition.x] == '$')
+    {
+        EndCondition("You Win!");
+        break;
+    }
+    else if (maprows[cursorPosition.y - buffer.y][cursorPosition.x] == '%')
+    {
+        EndCondition("You Died!");
+        break;
+    }
     Console.SetCursorPosition(0, 10);
+
+    int mapY = cursorPosition.y - buffer.y;
+    int mapX = cursorPosition.x;
+    if (maprows[mapY][mapX] == '^')
+    {
+        collected++;
+        maprows[mapY] = maprows[mapY].Remove(mapX, 1).Insert(mapX, " ");
+        Console.SetCursorPosition(mapX, mapY + buffer.y);
+        Console.Write(" "); // visually erase '^'
+        Console.SetCursorPosition(0, rows + 2 + buffer.y);
+        Console.Write($"Collected: {collected}  ");
+    }
+    if (collected >= 10) //greater than just in case; doesn't hurt to include
+    {
+        
+    }
+
     //Console.WriteLine(maprows[cursorPosition.y]);
     Console.SetCursorPosition(cursorPosition.x, cursorPosition.y);
 
 }
 while (true);
 
-Console.SetCursorPosition(0, rows + 1);
-Console.WriteLine("You win!");
 
+void EndCondition(string message)
+{
+    Console.SetCursorPosition(0, rows + 1 + buffer.y);
+    Console.WriteLine(message);
+}
 
 static (int, int) CheckKeys((int x, int y) cursorPosition, ConsoleKey key, (int x, int y) buffer, string[] maprows)
 {
-    (int x, int y) map = (cursorPosition.y - buffer.y, cursorPosition.x - buffer.x);
+    (int x, int y) map = (cursorPosition.x - buffer.x, cursorPosition.y - buffer.y);
+
     char locationUp = ' ';
     char locationDown = ' ';
     char locationRight = ' ';
@@ -49,10 +83,11 @@ static (int, int) CheckKeys((int x, int y) cursorPosition, ConsoleKey key, (int 
         locationUp = maprows[cursorPosition.y - buffer.y-1][cursorPosition.x];
     if (map.y < maprows.Length - 1) 
         locationDown = maprows[cursorPosition.y - buffer.y+1][cursorPosition.x];
-    if (map.x < maprows.Length - 1)
+    if (cursorPosition.x < maprows[map.y].Length - 1)
         locationRight = maprows[cursorPosition.y - buffer.y][cursorPosition.x + 1];
-    if (map.x > 0)
+    if (cursorPosition.x > 0)
         locationLeft = maprows[cursorPosition.y - buffer.y][cursorPosition.x - 1];
+
 
     if (key == ConsoleKey.UpArrow && locationUp != '*' && locationUp != '|') cursorPosition.y--;
     else if (key == ConsoleKey.DownArrow && locationDown != '*' && locationDown != '|') cursorPosition.y++;
