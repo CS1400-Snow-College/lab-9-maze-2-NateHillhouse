@@ -4,6 +4,7 @@ Nathan Hillhouse
 Lab 9 - Maze 2
 */
 
+//Note: This week has been difficult, so this assignment was more difficult than it should have been
 
 Console.Clear();
 Console.WriteLine("Welcome to the Maze! You will use your arrow keys to navigate the maze.");
@@ -48,7 +49,17 @@ do
     GetCoins();
     if (collected >= 10) //greater than just in case; doesn't hurt to include
     {
-        
+        for (int item = 0; item < maprows.Length; item++)
+        {
+            for (int i = 0; item < maprows[0].Length; i ++)
+            {
+                if (maprows[item][i] == '|')
+                {
+                    maprows[item].Remove(i).Insert(i, " ");
+                }
+
+            }
+        }
     }
 
 
@@ -136,17 +147,17 @@ List<(int x, int y)> EnemyMovement(List<(int x, int y)> enemies, string[] maprow
             int newY = oldY + dy;
 
             // bounds
-            if (newY < 0 || newY >= maprows.Length || newX < 0 || newX >= maprows[newY].Length)
+            if (newY < buffer.y || newY >= maprows.Length || newX < 0 || newX >= maprows[newY].Length)
                 continue;
 
             // don't walk into walls / obstacles
-            char target = maprows[newY][newX];
+            char target = maprows[newY][newX + buffer.x];
             if (target == '*' || target == '|' || target == '^')
                 continue;
-            // don't collide with previously moved enemies this tick
+                
             if (newLocations.Contains((newX, newY))) continue;
 
-            // don't move into other existing enemies (if you want enemies to pass through each other, skip this)
+
             if (occupied.Contains((newX, newY)) && !(newX == oldX && newY == oldY)) continue;
 
             // OK this location is valid
